@@ -1,0 +1,11 @@
+extends layout 
+
+block content
+    h1(class="mb-3 text-center") #{title}
+    h4 Messages
+    ul(class="list-group")
+    each m in messages 
+      li(class="list-group-item") #{m.user} : #{m.text}
+      p=m.added
+    a(href='./new' )
+      btn(class="btn btn-primary btn-block") Add new message
